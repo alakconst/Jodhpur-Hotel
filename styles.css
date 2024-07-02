@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ccc;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background-color: #eee;
+    padding: 50px 20px;
+}
+
+/* Amenities Section */
+.amenities {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 20px;
+    flex: 1 1 calc(50% - 40px);
+}
+
+.grid-item:nth-child(odd) .amenities-img {
+    order: 1;
+}
+
+.grid-item:nth-child(even) .amenities-img {
+    order: 2;
+}
+
+.grid-item i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* USP and CTA Sections */
+.usp, .cta {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Amenities Images */
+.amenities-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.contact .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.contact .btn:hover {
+    background-color: #ccc;
+}
+
+/* Responsive Images */
+.responsive-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grid-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .amenities-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .responsive-img {
+        height: auto;
+    }
+}
